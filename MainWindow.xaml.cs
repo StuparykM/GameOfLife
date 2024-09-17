@@ -30,7 +30,7 @@ namespace GameOfLife
             //Method that initializes all elements in xaml
             InitializeComponent();
 
-            //Timer settings, using Step method as it's Tick
+            //Timer settings, using Step method as its Tick
             _timer.Tick += Step;
             _timer.Interval = TimeSpan.FromMilliseconds(100);
 
@@ -145,7 +145,7 @@ namespace GameOfLife
 
         void ImplementRules(int count, int row, int col, Grid cellGrid)
         {
-            //implements rules of Conway's Game of Life, using the origin cell (row, col) and the count of it's live neighbours.
+            //implements rules of Conway's Game of Life, using the origin cell (row, col) and the count of its live neighbours.
             Button cell = cellGrid.Children.Cast<Button>().First(e => Grid.GetRow(e) == row && Grid.GetColumn(e) == col);
             bool isAlive = SameBackground((SolidColorBrush)cell.Background, new SolidColorBrush(Colors.Yellow));
 
